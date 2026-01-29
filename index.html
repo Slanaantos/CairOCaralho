@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canal do Povo Escolhido — Lojinha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coal: "#0B0B0B",
+              chalk: "#F5F5F5",
+              gunmetal: "#1A1A1A",
+              graphite: "#2A2A2A",
+              accent: "#E31B23",
+            },
+            fontFamily: {
+              display: ["Anton", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            boxShadow: {
+              soft: "0 12px 32px rgba(0,0,0,0.25)",
+            },
+            backgroundImage: {
+              "grain":
+                "linear-gradient(0deg, rgba(11,11,11,0.92), rgba(11,11,11,0.92)), radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 55%), radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08), transparent 45%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-coal text-chalk font-body">
+    <div class="min-h-screen">
+      <div class="bg-gunmetal text-xs uppercase tracking-[0.2em] px-4 py-2 text-chalk/80">
+        <div class="max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <span>Frete para todo Brasil • Lançamentos limitados • Povo Escolhido</span>
+          <div class="flex items-center gap-4 text-chalk/70">
+            <a class="hover:text-chalk transition" href="#">Entrar</a>
+            <a class="hover:text-chalk transition" href="#">Ajuda</a>
+          </div>
+        </div>
+      </div>
+
+      <header class="sticky top-0 z-40 border-b border-white/10 bg-coal/95 backdrop-blur">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="flex items-center gap-3 flex-1">
+              <button
+                class="inline-flex items-center justify-center rounded-md border border-white/20 p-2 text-chalk md:hidden"
+                aria-label="Abrir menu"
+              >
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+              <div>
+                <p class="font-display text-2xl tracking-[0.3em]">POVO ESCOLHIDO</p>
+                <span class="text-xs text-chalk/60 uppercase tracking-[0.35em]">Canal do Povo Escolhido</span>
+              </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm uppercase tracking-widest text-chalk/70">
+              <a class="hover:text-chalk transition" href="#">Início</a>
+              <a class="hover:text-chalk transition" href="#">Camisetas</a>
+              <a class="hover:text-chalk transition" href="#">Acessórios</a>
+              <a class="hover:text-chalk transition" href="#">Frases</a>
+              <a class="hover:text-chalk transition" href="#">Coleções</a>
+              <a class="hover:text-chalk transition" href="#">Sobre</a>
+            </nav>
+
+            <div class="w-full md:w-72">
+              <label class="sr-only" for="search">Buscar na lojinha</label>
+              <input
+                id="search"
+                class="w-full rounded-full border border-white/10 bg-graphite px-4 py-2 text-sm text-chalk placeholder:text-chalk/40 focus:outline-none focus:ring-2 focus:ring-accent/70"
+                placeholder="Buscar na lojinha…"
+                type="search"
+              />
+            </div>
+
+            <div class="flex items-center gap-3">
+              <button class="rounded-full border border-white/20 p-2 transition hover:border-accent focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Conta">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-1a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v1" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </button>
+              <button class="rounded-full border border-white/20 p-2 transition hover:border-accent focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Favoritos">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.18L12 21z" />
+                </svg>
+              </button>
+              <button class="rounded-full border border-white/20 p-2 transition hover:border-accent focus:outline-none focus:ring-2 focus:ring-accent" aria-label="Carrinho">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                  <circle cx="9" cy="21" r="1" />
+                  <circle cx="20" cy="21" r="1" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="relative overflow-hidden bg-grain">
+          <div class="max-w-7xl mx-auto px-4 py-16 lg:py-24">
+            <div class="grid gap-10 lg:grid-cols-[1.2fr_1fr] items-center">
+              <div>
+                <p class="text-xs uppercase tracking-[0.3em] text-chalk/60 mb-4">Lojinha oficial do canal</p>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
+                  O Corinthians está condenado a dar certo.
+                </h1>
+                <p class="mt-4 text-lg text-chalk/70 max-w-xl">
+                  Produtos do canal • Feitos pra quem vive o corinthianismo.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                  <a
+                    href="#"
+                    class="rounded-full bg-accent px-6 py-3 text-sm uppercase tracking-widest text-white transition hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-accent"
+                  >
+                    Ver lançamentos
+                  </a>
+                  <a
+                    href="#"
+                    class="rounded-full border border-white/30 px-6 py-3 text-sm uppercase tracking-widest text-chalk transition hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"
+                  >
+                    Conhecer a coleção
+                  </a>
+                </div>
+                <div class="mt-10 flex flex-wrap gap-3">
+                  <span class="rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-widest">Edição limitada</span>
+                  <span class="rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-widest">Algodão premium</span>
+                  <span class="rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-widest">Envio rápido</span>
+                </div>
+              </div>
+              <div class="rounded-3xl border border-white/10 bg-graphite/70 p-6 shadow-soft">
+                <div class="aspect-[4/3] rounded-2xl border border-dashed border-white/30 bg-gunmetal/70 flex items-center justify-center text-chalk/60 uppercase tracking-[0.35em]">
+                  Banner
+                </div>
+                <div class="mt-6 flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-xs uppercase text-chalk/50">Coleção arquibancada</p>
+                    <p class="font-display text-2xl">Acabou de acabar</p>
+                  </div>
+                  <span class="rounded-full bg-white/10 px-4 py-2 text-xs uppercase tracking-widest">Últimas unidades</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-coal">
+          <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="flex items-end justify-between mb-8">
+              <div>
+                <p class="text-xs uppercase tracking-[0.3em] text-chalk/60">Produtos</p>
+                <h2 class="font-display text-3xl uppercase tracking-[0.3em]">Poucos, fortes e diretos.</h2>
+              </div>
+              <a class="hidden sm:inline-flex text-xs uppercase tracking-[0.3em] text-chalk/60 hover:text-accent" href="#">Ver tudo</a>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <article class="rounded-2xl border border-white/10 bg-graphite p-4 transition hover:-translate-y-1 hover:border-accent">
+                <div class="aspect-square rounded-xl border border-dashed border-white/20 bg-gunmetal flex items-center justify-center text-xs uppercase tracking-[0.3em] text-chalk/50">
+                  Imagem do produto
+                </div>
+                <div class="mt-4 flex items-center gap-2">
+                  <span class="rounded-full border border-white/20 px-2 py-1 text-[10px] uppercase tracking-widest">Novo</span>
+                  <span class="rounded-full bg-accent px-2 py-1 text-[10px] uppercase tracking-widest">Limitado</span>
+                </div>
+                <h3 class="mt-3 font-display text-lg">Camiseta “Condenado a dar certo”</h3>
+                <p class="text-sm text-chalk/70">R$ 89,90</p>
+                <button class="mt-4 w-full rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-widest transition hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent">
+                  Adicionar
+                </button>
+              </article>
+              <article class="rounded-2xl border border-white/10 bg-graphite p-4 transition hover:-translate-y-1 hover:border-accent">
+                <div class="aspect-square rounded-xl border border-dashed border-white/20 bg-gunmetal flex items-center justify-center text-xs uppercase tracking-[0.3em] text-chalk/50">
+                  Imagem do produto
+                </div>
+                <div class="mt-4 flex items-center gap-2">
+                  <span class="rounded-full border border-white/20 px-2 py-1 text-[10px] uppercase tracking-widest">Mais vendido</span>
+                </div>
+                <h3 class="mt-3 font-display text-lg">Camiseta “Corinthianismo”</h3>
+                <p class="text-sm text-chalk/70">R$ 79,90</p>
+                <button class="mt-4 w-full rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-widest transition hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent">
+                  Adicionar
+                </button>
+              </article>
+              <article class="rounded-2xl border border-white/10 bg-graphite p-4 transition hover:-translate-y-1 hover:border-accent">
+                <div class="aspect-square rounded-xl border border-dashed border-white/20 bg-gunmetal flex items-center justify-center text-xs uppercase tracking-[0.3em] text-chalk/50">
+                  Imagem do produto
+                </div>
+                <div class="mt-4 flex items-center gap-2">
+                  <span class="rounded-full border border-white/20 px-2 py-1 text-[10px] uppercase tracking-widest">Limitado</span>
+                </div>
+                <h3 class="mt-3 font-display text-lg">Boné “Povo Escolhido”</h3>
+                <p class="text-sm text-chalk/70">R$ 99,90</p>
+                <button class="mt-4 w-full rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-widest transition hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent">
+                  Adicionar
+                </button>
+              </article>
+              <article class="rounded-2xl border border-white/10 bg-graphite p-4 transition hover:-translate-y-1 hover:border-accent">
+                <div class="aspect-square rounded-xl border border-dashed border-white/20 bg-gunmetal flex items-center justify-center text-xs uppercase tracking-[0.3em] text-chalk/50">
+                  Imagem do produto
+                </div>
+                <div class="mt-4 flex items-center gap-2">
+                  <span class="rounded-full border border-white/20 px-2 py-1 text-[10px] uppercase tracking-widest">Novo</span>
+                </div>
+                <h3 class="mt-3 font-display text-lg">Caneca “Vai, Corinthians”</h3>
+                <p class="text-sm text-chalk/70">R$ 49,90</p>
+                <button class="mt-4 w-full rounded-full border border-white/20 px-4 py-2 text-xs uppercase tracking-widest transition hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent">
+                  Adicionar
+                </button>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-chalk text-coal">
+          <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid gap-6 lg:grid-cols-[1.4fr_1fr] items-center">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.2em] text-coal/70">Interesse real</p>
+                <p class="mt-3 text-lg text-coal/80">
+                  Tenho interesse em um produto do canal do povo escolhido, entre com seu email aqui (todos emails serão
+                  usados e enviados apenas pelo dono do Canal do Povo Escolhido).
+                </p>
+                <p class="mt-3 text-sm text-coal/60">
+                  Cadastros contabilizados neste navegador: <span id="email-count" class="font-semibold text-coal">0</span>
+                </p>
+                <p class="mt-2 text-xs text-coal/50">
+                  Este cadastro serve apenas para mostrar ao Cacá que existe demanda real pelos produtos.
+                </p>
+              </div>
+              <form id="interest-form" class="flex flex-col gap-3 sm:flex-row" novalidate>
+                <label class="sr-only" for="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="Digite seu email"
+                  class="flex-1 rounded-full border border-coal/20 bg-white px-4 py-3 text-sm text-coal placeholder:text-coal/40 focus:outline-none focus:ring-2 focus:ring-accent"
+                />
+                <button
+                  type="submit"
+                  class="rounded-full bg-accent px-6 py-3 text-xs uppercase tracking-widest text-white transition hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-accent"
+                >
+                  Quero entrar
+                </button>
+              </form>
+              <p id="form-feedback" class="text-xs text-coal/70 sm:col-span-2" aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="bg-coal border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+          <div class="grid gap-8 md:grid-cols-4">
+            <div>
+              <h3 class="font-display text-xl uppercase tracking-[0.2em]">Loja</h3>
+              <ul class="mt-4 space-y-2 text-sm text-chalk/70">
+                <li><a class="hover:text-accent" href="#">Camisetas</a></li>
+                <li><a class="hover:text-accent" href="#">Acessórios</a></li>
+                <li><a class="hover:text-accent" href="#">Coleções</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display text-xl uppercase tracking-[0.2em]">Ajuda</h3>
+              <ul class="mt-4 space-y-2 text-sm text-chalk/70">
+                <li><a class="hover:text-accent" href="#">Trocas e devoluções</a></li>
+                <li><a class="hover:text-accent" href="#">Entrega</a></li>
+                <li><a class="hover:text-accent" href="#">Contato</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display text-xl uppercase tracking-[0.2em]">Institucional</h3>
+              <ul class="mt-4 space-y-2 text-sm text-chalk/70">
+                <li><a class="hover:text-accent" href="#">Sobre o canal</a></li>
+                <li><a class="hover:text-accent" href="#">Privacidade</a></li>
+                <li><a class="hover:text-accent" href="#">Termos</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-display text-xl uppercase tracking-[0.2em]">Social</h3>
+              <ul class="mt-4 space-y-2 text-sm text-chalk/70">
+                <li><a class="hover:text-accent" href="#">YouTube</a></li>
+                <li><a class="hover:text-accent" href="#">Instagram</a></li>
+                <li><a class="hover:text-accent" href="#">TikTok</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-10 border-t border-white/10 pt-6 text-xs text-chalk/50">
+            <p>Loja independente do canal. Não oficial do Sport Club Corinthians Paulista.</p>
+            <p>Produtos e frases são do universo do canal/fanbase.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const form = document.getElementById("interest-form");
+      const emailInput = document.getElementById("email");
+      const countEl = document.getElementById("email-count");
+      const feedbackEl = document.getElementById("form-feedback");
+
+      const storageKey = "povo-escolhido-emails";
+
+      const getEmails = () => {
+        const raw = localStorage.getItem(storageKey);
+        if (!raw) return [];
+        try {
+          return JSON.parse(raw);
+        } catch {
+          return [];
+        }
+      };
+
+      const updateCount = () => {
+        countEl.textContent = String(getEmails().length);
+      };
+
+      const showFeedback = (message, isError = false) => {
+        feedbackEl.textContent = message;
+        feedbackEl.classList.toggle("text-accent", isError);
+        feedbackEl.classList.toggle("text-coal/70", !isError);
+      };
+
+      updateCount();
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email || !email.includes("@")) {
+          showFeedback("Digite um email válido para registrar interesse.", true);
+          return;
+        }
+        const emails = getEmails();
+        if (!emails.includes(email)) {
+          emails.push(email);
+          localStorage.setItem(storageKey, JSON.stringify(emails));
+          updateCount();
+        }
+        showFeedback("Interesse registrado. Obrigado!", false);
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
